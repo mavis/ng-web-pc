@@ -1,0 +1,142 @@
+// 公共样式
+@import "./variable.less";
+// @import "./elementUI.css";
+@import "./pagination.less";
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding:0;
+  font-family: @font-family;
+  color: @col-text-000;
+  background-color: #f4f4f4;
+  overflow: hidden;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-size: @f14;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color:   @col-text-base;
+}
+a.a-link{
+  color: @col-main;
+  font-size: 12px;
+}
+a.a1-link{
+  color: @col-main;
+  font-size: 12px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+#app {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfix:after{
+  display: block;
+  content: '';
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+.font-min{
+  font-size: 10px;
+  color: #a7a7a7;
+  -webkit-transform: scale(0.84); 
+}
+.f14{
+  font-size: 14px;
+}
+.f16{
+  font-size: 16px;
+}
+.flex{
+    display: -moz-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    // -moz-box-align: center;
+    // -webkit-box-align: center;
+    // -ms-flex-align: center;
+    // -webkit-align-items: center;
+    // align-items: center;
+    // -moz-box-pack: center;
+    // -webkit-box-pack: center;
+    // -ms-flex-pack: center;
+    // -webkit-justify-content: center;
+    /*for ie9*/
+    
+    justify-content: center;
+    display: table\0;
+}
+.flex-item{
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  display: table-cell;
+}
+
+
+
+
+  .title-big{
+    font-size: 23px;
+    color: #333;
+  }
+
+// .filter-box{
+//   height: 30px;
+//   // padding-bottom:15px;
+//   color:#666;
+//   font-size: @f12;
+//   .filter-box-item{
+//     margin-right:5px;
+//   }
+//   >span{
+//     display: inline-block;
+//     margin-right: 5px;
+//   }
+// }
+.isFixed{
+  position:fixed;
+  top:0;
+  z-index:999;
+}
+
+.hidden{
+  display: none;
+}
+.el-dialog__footer,
+.frm-btn{
+  text-align: center
+} 
+.el-tabs--border-card{
+  box-shadow:inherit;
+}
+.el-tabs--border-card > .el-tabs__header{
+  background-color: #fff;
+}
