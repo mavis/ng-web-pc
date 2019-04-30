@@ -2,7 +2,15 @@
   <div v-title="''">
       <layout>
         <div slot="content"  class="main-content">
-            eee
+            <div class="content-l">
+              <category-module></category-module>
+            </div>
+            <div class="content-l">
+              
+            </div>
+            <div class="content-l">
+              
+            </div>
         </div>
       </layout>
   </div> 
@@ -10,9 +18,10 @@
 <script>
 import { mapState, mapActions,mapMutations } from 'vuex';
 import Layout from '../../components/layout/layout'
+import categoryModule from '../../components/category/category'
 export default {  
   components: {
-    Layout
+    Layout,categoryModule
   },
   data(){
       return{

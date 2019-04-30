@@ -23,9 +23,9 @@
                     </div>
                     <div class="top-search flex-item">
                         <a-input-search
-      placeholder="input search text"
-      style="width:100%"
-    />
+                            placeholder="input search text"
+                            style="width:100%"
+                            />
                     </div>
                 </div>
             </div>
