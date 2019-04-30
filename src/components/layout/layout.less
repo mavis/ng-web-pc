@@ -1,4 +1,8 @@
 @import "../../assets/css/variable.less";
+.main{
+    height: 100%;
+    // overflow-y: auto;
+}
 .header-content{
     width:@w-main;
     margin: 0 auto;
@@ -6,4 +10,26 @@
 }
 .footer-content{
     text-align: center;
+}
+.content-top{
+    padding-top: 24px;
+    height: 97px;
+    &.top-fixed{
+        position:fixed;
+        top:0;
+        z-index:999;
+        .top-title{
+            display: none
+        }
+    }
+    .content-top-inner{
+        width:@w-main;
+        margin: 0 auto;
+        .top-logo{
+            width:@w-left;
+        }
+        .top-title{
+            width:300px;
+        }
+    }
 }
