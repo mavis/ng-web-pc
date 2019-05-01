@@ -7,7 +7,7 @@ import { setMetaTitle,getCookie,getuserInfo} from './assets/js/util.js'
 import store from './store'
 import axios from 'axios'
 import Antd from 'ant-design-vue'
-import 'ant-design-vue/dist/antd.css'
+import 'ant-design-vue/dist/antd.less'
 Vue.config.productionTip = false
 Vue.prototype.$http = axios;
 Vue.use(Antd)

@@ -16,16 +16,22 @@
             <div class="content-top"  id="main-top" :class="{'top-fixed':mainTopFixed}">
                 <div class="content-top-inner  flex">
                     <div class="top-logo">
-                        <img>
+                        <div><img src='../../assets/img/u168.png' class="logo-img"></div>
+                        <div><img src='../../assets/img/u180.png' class="logo-txt"></div>
                     </div>
                     <div class="top-title">
-                        科技 创新
+                        科技 · 融通 · 创新 · 求实
                     </div>
                     <div class="top-search flex-item">
-                        <a-input-search
-                            placeholder="input search text"
-                            style="width:100%"
-                            />
+                        <div class="top-search-inner flex">
+                            <div class="flex-item search-input"><a-input-search
+                                placeholder="input search text"
+                                style="width:100%"
+                                /></div>
+                            <div><a-button type="primary">我要买</a-button></div>
+                            <div><a-button type="primary">我要卖</a-button></div>
+                        </div>
+
                     </div>
                 </div>
             </div>

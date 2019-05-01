@@ -2,13 +2,13 @@
   <div v-title="''">
       <layout>
         <div slot="content"  class="main-content">
-            <div class="content-l">
+            <div class="content-1">
               <category-module></category-module>
             </div>
-            <div class="content-l">
+            <div class="content-moudle">
               
             </div>
-            <div class="content-l">
+            <div class="content-moudle">
               
             </div>
         </div>
