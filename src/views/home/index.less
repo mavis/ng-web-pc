@@ -5,7 +5,45 @@
     min-height: 800px;
     padding:20px 0;
     .content-1{
-
+        height: 430px;
+        width: 100%;
+        .content-1-l{
+            width:@w-left;
+            min-width:@w-left;
+        }
+        .content-1-m{
+            overflow: hidden;
+            width:685px;
+            .ant-carousel  .slick-slide {
+                text-align: center;
+                height: 410px;
+                line-height: 410px;
+                background: #364d79;
+                overflow: hidden;
+              }
+              
+              .ant-carousel  .slick-slide h3 {
+                color: #fff;
+              }
+              .ant-carousel  .custom-slick-arrow {
+                width: 25px;
+                height: 25px;
+                font-size: 25px;
+                color: #fff;
+                background-color: rgba(31,45,61,.11);
+                opacity: 0.3;
+              }
+              .ant-carousel .custom-slick-arrow:before {
+                display: none;
+              }
+              .ant-carousel  .custom-slick-arrow:hover {
+                opacity: 0.5;
+              }
+         
+        }
+        .content-1-r{
+            width: @w-right;
+        }
     }
     .content-moudle{
         

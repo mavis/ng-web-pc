@@ -22,10 +22,24 @@
                     <div class="top-title">
                         科技 · 融通 · 创新 · 求实
                     </div>
+                    <div class="top-nav">
+                        <span>
+                            <router-link  tag="a" :to="{path:'/index'}" >首页</router-link>
+                        </span>
+                        <span>
+                            <router-link  tag="a" :to="{path:'/index'}" >现货商城</router-link>
+                        </span>
+                        <span>
+                            <router-link  tag="a" :to="{path:'/index'}" >预售专区</router-link>
+                        </span>
+                        <span>
+                            <router-link  tag="a" :to="{path:'/index'}" >指数咨询</router-link>
+                        </span>
+                    </div>
                     <div class="top-search flex-item">
                         <div class="top-search-inner flex">
                             <div class="flex-item search-input"><a-input-search
-                                placeholder="input search text"
+                                placeholder="搜索"
                                 style="width:100%"
                                 /></div>
                             <div><a-button type="primary">我要买</a-button></div>
