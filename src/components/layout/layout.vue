@@ -82,21 +82,30 @@ export default {
   },   
   methods:{
      onscroll:function(e){
-        var scrollTop = document.querySelector('#app').scrollTop;
+        // var scrollTop = document.querySelector('#app').scrollTop;
 
+        // var offsetTop = document.querySelector('#main-top').offsetTop;
+        // if (scrollTop > offsetTop) {
+        //     this.mainTopFixed = true
+        // } else {
+        //     this.mainTopFixed = false
+        // }  
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
         var offsetTop = document.querySelector('#main-top').offsetTop;
         if (scrollTop > offsetTop) {
             this.mainTopFixed = true
         } else {
             this.mainTopFixed = false
         }
+
      }
   },
     created(){
 
     },
     mounted () {
-        document.querySelector('#app').addEventListener('scroll', this.onscroll)
+        window.addEventListener('scroll', this.onscroll,true)
+        // document.querySelector('#app').addEventListener('scroll', this.onscroll)
     },
     destroyed () {
         document.querySelector('#app').removeEventListener('scroll', this.onscroll)

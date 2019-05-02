@@ -39,13 +39,17 @@
                   <a-button type="primary" class="btn-login">登录</a-button>
                   <a-button class="btn-register">免费注册</a-button>
                 </div>
-                <div>
+                <div class="tabbox">
                     <a-tabs defaultActiveKey="1">
                       <a-tab-pane tab="消息通知" key="1">
-                        Content of Tab Pane 1
+                        <div class="tab-pane">
+                            1111
+                        </div>
                       </a-tab-pane>
                       <a-tab-pane tab="成交动态" key="2" forceRender>
-                        Content of Tab Pane 2
+                        <div class="tab-pane">
+                          222222
+                        </div>
                       </a-tab-pane>
                     </a-tabs>
                 </div>
