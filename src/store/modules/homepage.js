@@ -1,5 +1,5 @@
 
-import {api} from '../assets/js/api'
+import {api} from '../../assets/js/api'
 import axios from 'axios'
 const REQ_SUCCESS = 200
 
@@ -15,7 +15,11 @@ const homepage={
   },
   actions: {
     getTopBanners({commit,state,dispatch}){
-
+        return axios.get(api.getTopBanners).then(res => {
+            commit('setTopBanners', {
+                topBanners: res.data.data
+            })
+        })
     } 
   }
 }

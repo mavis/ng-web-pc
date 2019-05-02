@@ -4,7 +4,7 @@
 // const HOST = '/rest';
 const HOST = '';
 const api = {
-    'getTopBanners':'/getTopBanners'
+    'getTopBanners':'/index/getTopBanners'
 }
 
 for (let [key, value] of Object.entries(api)) {

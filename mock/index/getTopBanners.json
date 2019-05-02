@@ -1,0 +1,17 @@
+{
+    "code":200,
+    "data":[
+        {
+            "img":"/static/banner-1.png"
+        },
+        {
+            "img":"/static/banner-2.png"
+        },
+        {
+            "img":"/static/banner-3.png"
+        },
+        {
+            "img":"/static/banner-4.png"
+        }
+    ]
+}

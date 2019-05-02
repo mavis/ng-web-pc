@@ -48,6 +48,20 @@
 
                     </div>
                 </div>
+                <div class="content-top-navbar "> 
+                    <span>
+                        <router-link  tag="a" :to="{path:'/index'}" >首页</router-link>
+                    </span>
+                    <span>
+                        <router-link  tag="a" :to="{path:'/index'}" >现货商城</router-link>
+                    </span>
+                    <span>
+                        <router-link  tag="a" :to="{path:'/index'}" >预售专区</router-link>
+                    </span>
+                    <span>
+                        <router-link  tag="a" :to="{path:'/index'}" >指数咨询</router-link>
+                    </span>                    
+                </div>
             </div>
             <slot name='content'> </slot>
         </a-layout-content>

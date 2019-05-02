@@ -8,7 +8,7 @@
               llllll
               </div>
               <div class="content-1-m fl">
-                  <a-carousel effect="fade" dots='false' autoplay="true" arrows>
+                  <a-carousel effect="fade" :dots='dots' :autoplay="autoplay" arrows>
                       <div
                         slot="prevArrow" slot-scope="props"
                         class="custom-slick-arrow"
@@ -23,14 +23,32 @@
                       >
                         <a-icon type="right-circle" />
                       </div>
-                    <div><h3>1</h3></div>
-                    <div><h3>2</h3></div>
-                    <div><h3>3</h3></div>
-                    <div><h3>4</h3></div>
+                    <div v-for="item in topBanners" :key="item.img">
+                      <img :src="item.img">
+                    </div>
                   </a-carousel>
               </div>
               <div class="content-1-r fl">
-                dddd
+                <div class="account-logo">
+                  <img src="../../assets/img/u192.png">
+                </div>
+                <div class="account-welcome ">
+                    Hi，欢迎来到云耕供销网
+                </div>
+                <div  class="account-btn">
+                  <a-button type="primary" class="btn-login">登录</a-button>
+                  <a-button class="btn-register">免费注册</a-button>
+                </div>
+                <div>
+                    <a-tabs defaultActiveKey="1">
+                      <a-tab-pane tab="消息通知" key="1">
+                        Content of Tab Pane 1
+                      </a-tab-pane>
+                      <a-tab-pane tab="成交动态" key="2" forceRender>
+                        Content of Tab Pane 2
+                      </a-tab-pane>
+                    </a-tabs>
+                </div>
               </div>
             </div>
             <div class="content-moudle">
@@ -53,14 +71,22 @@ export default {
   },
   data(){
       return{
-         
+         autoplay:true,
+         dots:false
       }
-  },   
+  },  
+  computed: {
+    ...mapState('homepage',[
+       'topBanners'
+    ]),
+  },  
   methods:{
-     
+    ...mapActions('homepage',[
+      'getTopBanners'
+    ]),
   },
   created(){
-
+    this.getTopBanners();
   }
 }
 </script>

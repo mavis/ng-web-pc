@@ -9,6 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
+const fs = require('fs')
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
@@ -42,6 +43,20 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
+    },
+    before(app) {
+      app.get('/index/*', (req, res) => {
+        let reqPath = req.params[0].split('/');
+        let paramsName = reqPath[reqPath.length - 1];
+        if (paramsName.includes('.')) {
+          paramsName = paramsName.split('.')[0];
+        }
+        paramsName += '.json'
+        let mockFile = path.join(__dirname, '../mock/index/', paramsName);
+        let result = JSON.parse(fs.readFileSync(mockFile));
+
+        res.json(result);
+      })
     }
   },
   plugins: [

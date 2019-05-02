@@ -13,7 +13,6 @@
 }
 .content-top{
     padding-top: 24px;
-    height: 97px;
     background-color: #fff;
     &.top-fixed{
         position:fixed;
@@ -28,6 +27,9 @@
             .top-nav{
                 display: inline-block;
             }
+        }
+        .content-top-navbar{
+            display: none;
         }
     }
     .content-top-inner{
@@ -78,6 +80,28 @@
                 font-size:15px;
                 color:#000;
                 font-weight: bolder;
+                a{
+                    color:#000;
+                }
+            }
+        }
+    }
+    .content-top-navbar{
+        width:@w-main;
+        margin: 0 auto;
+        height:60px;
+        line-height: 60px;
+        padding-left:@w-left;
+        border-bottom:3px solid @primary-color;
+        >span{
+            width:100px;
+            text-align: center;
+            display: inline-block;
+            font-size:16px;
+            color:#000;
+            font-weight: bolder;
+            a{
+                color:#000;
             }
         }
     }
