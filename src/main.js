@@ -10,6 +10,8 @@ import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.less'
 Vue.config.productionTip = false
 Vue.prototype.$http = axios;
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts
 Vue.use(Antd)
 Vue.directive('title', {
   inserted: function (el, binding) {
