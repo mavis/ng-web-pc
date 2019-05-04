@@ -1,0 +1,37 @@
+{
+    "code":200,
+    "data":[
+        {
+            "id":"001",
+            "producingArea":"岔路口",
+            "productName":"玉米",
+            "finalPrice":"100",
+            "businessVolume":"100",
+            "closingTime":"1月15日"
+        },
+        {
+            "id":"002",
+            "producingArea":"岔路口",
+            "productName":"玉米",
+            "finalPrice":"100",
+            "businessVolume":"100",
+            "closingTime":"1月15日"
+        },
+        {
+            "id":"003",
+            "producingArea":"岔路口",
+            "productName":"玉米",
+            "finalPrice":"100",
+            "businessVolume":"100",
+            "closingTime":"1月15日"
+        },
+        {
+            "id":"004",
+            "producingArea":"岔路口",
+            "productName":"玉米",
+            "finalPrice":"100",
+            "businessVolume":"100",
+            "closingTime":"1月15日"
+        }
+    ]
+}

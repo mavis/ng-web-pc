@@ -61,8 +61,7 @@ exports.cssLoaders = function (options) {
     // less: generateLoaders('less'),
     less: generateLoaders('less', {
          modifyVars: {
-           'primary-color': '#1ABC9C',
-           'layout-body-background':'#ffffff'
+           'primary-color': '#1ABC9C'
          },
          javascriptEnabled: true,
     }),

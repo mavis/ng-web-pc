@@ -6,6 +6,7 @@
     .content-1{
         height: 430px;
         width: 100%;
+        background-color: #fff;
         .content-1-l{
             width:@w-left;
             min-width:@w-left;
@@ -43,6 +44,20 @@
         .content-1-r{
             width: @w-right;
             padding:35px 0;
+            .dynamicsTable{
+                table{
+                    font-size: 12px;
+                    th{
+                        font-weight:bold;
+                        background-color: #fff;
+                    }
+                    td,th{
+                        padding:5px;
+                        border:none;
+                    }
+                }
+
+            }
             .account-logo{
                 text-align: center;
                 img{
@@ -70,6 +85,15 @@
         }
     }
     .content-moudle{
-        
+        margin:20px 0;
+        background-color: #fff;
+        padding:20px;
+        .content-moudle-title{
+            margin-bottom:20px;
+            padding-left:15px;
+            font-size: 23px;
+            color:@col-main;
+            border-left:6px solid  @col-main
+        }
     }
 }

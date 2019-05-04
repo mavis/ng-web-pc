@@ -47,8 +47,10 @@
                         </div>
                       </a-tab-pane>
                       <a-tab-pane tab="成交动态" key="2" forceRender>
-                        <div class="tab-pane">
-                          222222
+                        <div class="tab-pane dynamicsTable">
+                         <a-table :columns="dynamicsColumns" :dataSource="tradeDynamics" :pagination="dynamicsTablePage">
+                           
+                         </a-table>
                         </div>
                       </a-tab-pane>
                     </a-tabs>
@@ -56,12 +58,18 @@
               </div>
             </div>
             <div class="content-moudle">
+                <div class="content-moudle-title">
+                  预售专区
+                </div>
+                <slider :list="bookingMonthList"></slider>                
                 <div class="echarts">
                   <div :style="{height:'600px',width:'100%'}" ref="myEchart"></div>
                 </div>
             </div>
             <div class="content-moudle">
-              
+              <div class="content-moudle-title" style="color:#6699FF;border-color:#6699FF">
+                  平台指数
+              </div>
             </div>
         </div>
       </layout>
@@ -71,10 +79,13 @@
 import { mapState, mapActions,mapMutations } from 'vuex';
 import Layout from '../../components/layout/layout'
 import categoryModule from '../../components/category/category'
+import slider from '../../components/slider/slider'
 import '../../../node_modules/echarts/map/js/china.js' // 引入中国地图数据
+
+
 export default {  
   components: {
-    Layout,categoryModule
+    Layout,categoryModule,slider
   },
   data(){
       return{
@@ -94,17 +105,45 @@ export default {
                     '青岛':[120.33,36.07],
                     '乳山':[121.52,36.89],
                     '河北':[114.48,38.04]
-                }
+                },
+          dynamicsColumns:[
+            {
+              dataIndex: 'producingArea',
+              key: 'producingArea',
+              title:"产地"
+            }, 
+            {
+              title: '产品名称',
+              dataIndex: 'productName',
+              key: 'productName',
+            },
+            {
+              title: '成交价格',
+              dataIndex: 'finalPrice',
+              key: 'finalPrice',
+            }, 
+            {
+              title: '成交量',
+              key: 'businessVolume',
+              dataIndex: 'businessVolume'
+            },
+            {
+              title: '成交时间',
+              key: 'closingTime',
+              dataIndex: 'closingTime'
+            }
+          ] ,
+          dynamicsTablePage:false     
       }
   },  
   computed: {
     ...mapState('homepage',[
-       'topBanners'
+       'topBanners','notice','tradeDynamics','bookingMonthList'
     ]),
   },  
   methods:{
     ...mapActions('homepage',[
-      'getTopBanners'
+      'getTopBanners','getNotices','getTradeDynamics','getBookingMonthList'
     ]),
     chinaConfigure() {
       var _me = this;
@@ -176,14 +215,16 @@ export default {
           }
         ]
       })
-      }
+    }
   },
   created(){
     this.getTopBanners();
+    this.getTradeDynamics();
   },
-      mounted() {
-      this.chinaConfigure();
-    },
+  mounted() {
+        this.chinaConfigure();
+
+  },
 }
 </script>
 <style lang="less">
