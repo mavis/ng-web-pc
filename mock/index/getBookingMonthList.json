@@ -2,13 +2,13 @@
     "code":200,
     "data":[
         {
-            "img":"/static/banner-1.png",
+           
             "date":"2019-5",
             "dateString":"五月",
             "list":[
                 {
                     "proName":"花生",
-                    "img":"/static/u524.png",
+                    "img":"/static/u524.jpg",
                     "pricre":"3",
                     "stock":"6"
                 },
@@ -21,13 +21,13 @@
             ]
         },
         {
-            "img":"/static/banner-1.png",
+           
             "date":"2019-6",
             "dateString":"六月",
             "list":[
                 {
                     "proName":"花生",
-                    "img":"/static/u524.png",
+                    "img":"/static/u524.jpg",
                     "pricre":"3",
                     "stock":"6"
                 },
@@ -40,13 +40,13 @@
             ]
         },
         {
-            "img":"/static/banner-1.png",
-            "date":"2019-5",
-            "dateString":"五月",
+           
+            "date":"2019-7",
+            "dateString":"七月",
             "list":[
                 {
                     "proName":"花生",
-                    "img":"/static/u524.png",
+                    "img":"/static/u524.jpg",
                     "pricre":"3",
                     "stock":"6"
                 },
@@ -59,13 +59,13 @@
             ]
         },
         {
-            "img":"/static/banner-1.png",
-            "date":"2019-5",
-            "dateString":"五月",
+           
+            "date":"2019-8",
+            "dateString":"八月",
             "list":[
                 {
                     "proName":"花生",
-                    "img":"/static/u524.png",
+                    "img":"/static/u524.jpg",
                     "pricre":"3",
                     "stock":"6"
                 },
@@ -78,13 +78,13 @@
             ]
         },
         {
-            "img":"/static/banner-1.png",
-            "date":"2019-5",
-            "dateString":"五月",
+           
+            "date":"2019-9",
+            "dateString":"九月",
             "list":[
                 {
                     "proName":"花生",
-                    "img":"/static/u524.png",
+                    "img":"/static/u524.jpg",
                     "pricre":"3",
                     "stock":"6"
                 },
@@ -97,13 +97,13 @@
             ]
         },
         {
-            "img":"/static/banner-1.png",
-            "date":"2019-5",
-            "dateString":"五月",
+           
+            "date":"2019-10",
+            "dateString":"十月",
             "list":[
                 {
                     "proName":"花生",
-                    "img":"/static/u524.png",
+                    "img":"/static/u524.jpg",
                     "pricre":"3",
                     "stock":"6"
                 },
@@ -116,13 +116,13 @@
             ]
         },
         {
-            "img":"/static/banner-1.png",
-            "date":"2019-5",
-            "dateString":"五月",
+           
+            "date":"2019-11",
+            "dateString":"十一月",
             "list":[
                 {
                     "proName":"花生",
-                    "img":"/static/u524.png",
+                    "img":"/static/u524.jpg",
                     "pricre":"3",
                     "stock":"6"
                 },
@@ -135,88 +135,13 @@
             ]
         },
         {
-            "img":"/static/banner-1.png",
-            "date":"2019-5",
-            "dateString":"五月",
+           
+            "date":"2019-12",
+            "dateString":"十二月",
             "list":[
                 {
                     "proName":"花生",
-                    "img":"/static/u524.png",
-                    "pricre":"3",
-                    "stock":"6"
-                },
-                {
-                    "proName":"葵花",
-                    "img":"/static/u527.png",
-                    "pricre":"3",
-                    "stock":"6"
-                }
-            ]
-        },
-        {
-            "img":"/static/banner-1.png",
-            "date":"2019-5",
-            "dateString":"五月",
-            "list":[
-                {
-                    "proName":"花生",
-                    "img":"/static/u524.png",
-                    "pricre":"3",
-                    "stock":"6"
-                },
-                {
-                    "proName":"葵花",
-                    "img":"/static/u527.png",
-                    "pricre":"3",
-                    "stock":"6"
-                }
-            ]
-        },
-        {
-            "date":"2019-5",
-            "dateString":"五月",
-            "list":[
-                {
-                    "proName":"花生",
-                    "img":"/static/u524.png",
-                    "pricre":"3",
-                    "stock":"6"
-                },
-                {
-                    "proName":"葵花",
-                    "img":"/static/u527.png",
-                    "pricre":"3",
-                    "stock":"6"
-                }
-            ]
-        },
-        {
-            
-            "date":"2019-5",
-            "dateString":"五月",
-            "list":[
-                {
-                    "proName":"花生",
-                    "img":"/static/u524.png",
-                    "pricre":"3",
-                    "stock":"6"
-                },
-                {
-                    "proName":"葵花",
-                    "img":"/static/u527.png",
-                    "pricre":"3",
-                    "stock":"6"
-                }
-            ]
-        },
-        {
-            "img":"/static/banner-1.png",
-            "date":"2019-5",
-            "dateString":"五月",
-            "list":[
-                {
-                    "proName":"花生",
-                    "img":"/static/u524.png",
+                    "img":"/static/u524.jpg",
                     "pricre":"3",
                     "stock":"6"
                 },

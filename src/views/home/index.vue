@@ -220,6 +220,7 @@ export default {
   created(){
     this.getTopBanners();
     this.getTradeDynamics();
+    this.getBookingMonthList();
   },
   mounted() {
         this.chinaConfigure();
