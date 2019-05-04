@@ -14,7 +14,7 @@
                                 </div>
                                 <div>
                                     <span>库存：</span>
-                                    <span>{{item.stock}万吨}</span>
+                                    <span>{{item.stock}}万吨</span>
                                 </div>
                             </div>
                         </div>
