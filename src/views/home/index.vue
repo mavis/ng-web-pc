@@ -123,17 +123,11 @@ export default {
   computed: {
     ...mapState('homepage',[
        'topBanners','notice','tradeDynamics','bookingMonthList','mapData'
-    ]),
-    ...mapState('categroy',[
-       'category'
-    ]),
+    ])
   },  
   methods:{
     ...mapActions('homepage',[
       'getTopBanners','getNotices','getTradeDynamics','getBookingMonthList','getMapData'
-    ]),
-    ...mapActions('categroy',[
-      'getCategory'
     ]),
 
     getProArea:function(proId,date){
@@ -145,7 +139,6 @@ export default {
     this.getTradeDynamics();
     this.getBookingMonthList();
     this.getProArea();
-    this.getCategory();
   },
 
 }
