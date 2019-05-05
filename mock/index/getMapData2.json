@@ -1,0 +1,13 @@
+{
+    "code":200,
+    "data":[
+        {
+            "img":"/static/peanut.png",
+            "name":"黑龙江"
+        },
+        {
+            "img":"/static/peanut.png",
+            "name":"山东"
+        }
+    ]
+}

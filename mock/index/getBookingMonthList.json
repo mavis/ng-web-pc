@@ -7,15 +7,15 @@
             "dateString":"五月",
             "list":[
                 {
-                    "proName":"花生",
-                    "img":"/static/u524.jpg",
-                    "pricre":"3",
+                    "proName":"花生","proId":"pro_0","proId":"pro_0",
+                    "img":"/static/peanut.png",
+                    "price":"3",
                     "stock":"6"
                 },
                 {
-                    "proName":"葵花",
+                    "proName":"葵花","proId":"pro_1",
                     "img":"/static/u527.png",
-                    "pricre":"3",
+                    "price":"3",
                     "stock":"6"
                 }
             ]
@@ -26,15 +26,15 @@
             "dateString":"六月",
             "list":[
                 {
-                    "proName":"花生",
-                    "img":"/static/u524.jpg",
-                    "pricre":"3",
+                    "proName":"花生","proId":"pro_0","proId":"pro_0",
+                    "img":"/static/peanut.png",
+                    "price":"3",
                     "stock":"6"
                 },
                 {
-                    "proName":"葵花",
+                    "proName":"葵花","proId":"pro_1",
                     "img":"/static/u527.png",
-                    "pricre":"3",
+                    "price":"3",
                     "stock":"6"
                 }
             ]
@@ -45,15 +45,15 @@
             "dateString":"七月",
             "list":[
                 {
-                    "proName":"花生",
-                    "img":"/static/u524.jpg",
-                    "pricre":"3",
+                    "proName":"花生","proId":"pro_0","proId":"pro_0",
+                    "img":"/static/peanut.png",
+                    "price":"3",
                     "stock":"6"
                 },
                 {
-                    "proName":"葵花",
+                    "proName":"葵花","proId":"pro_1",
                     "img":"/static/u527.png",
-                    "pricre":"3",
+                    "price":"3",
                     "stock":"6"
                 }
             ]
@@ -64,15 +64,15 @@
             "dateString":"八月",
             "list":[
                 {
-                    "proName":"花生",
-                    "img":"/static/u524.jpg",
-                    "pricre":"3",
+                    "proName":"花生","proId":"pro_0","proId":"pro_0",
+                    "img":"/static/peanut.png",
+                    "price":"3",
                     "stock":"6"
                 },
                 {
-                    "proName":"葵花",
+                    "proName":"葵花","proId":"pro_1",
                     "img":"/static/u527.png",
-                    "pricre":"3",
+                    "price":"3",
                     "stock":"6"
                 }
             ]
@@ -83,15 +83,15 @@
             "dateString":"九月",
             "list":[
                 {
-                    "proName":"花生",
-                    "img":"/static/u524.jpg",
-                    "pricre":"3",
+                    "proName":"花生","proId":"pro_0","proId":"pro_0",
+                    "img":"/static/peanut.png",
+                    "price":"3",
                     "stock":"6"
                 },
                 {
-                    "proName":"葵花",
+                    "proName":"葵花","proId":"pro_1",
                     "img":"/static/u527.png",
-                    "pricre":"3",
+                    "price":"3",
                     "stock":"6"
                 }
             ]
@@ -102,15 +102,15 @@
             "dateString":"十月",
             "list":[
                 {
-                    "proName":"花生",
-                    "img":"/static/u524.jpg",
-                    "pricre":"3",
+                    "proName":"花生","proId":"pro_0","proId":"pro_0",
+                    "img":"/static/peanut.png",
+                    "price":"3",
                     "stock":"6"
                 },
                 {
-                    "proName":"葵花",
+                    "proName":"葵花","proId":"pro_1",
                     "img":"/static/u527.png",
-                    "pricre":"3",
+                    "price":"3",
                     "stock":"6"
                 }
             ]
@@ -121,15 +121,15 @@
             "dateString":"十一月",
             "list":[
                 {
-                    "proName":"花生",
-                    "img":"/static/u524.jpg",
-                    "pricre":"3",
+                    "proName":"花生","proId":"pro_0","proId":"pro_0",
+                    "img":"/static/peanut.png",
+                    "price":"3",
                     "stock":"6"
                 },
                 {
-                    "proName":"葵花",
+                    "proName":"葵花","proId":"pro_1",
                     "img":"/static/u527.png",
-                    "pricre":"3",
+                    "price":"3",
                     "stock":"6"
                 }
             ]
@@ -140,15 +140,15 @@
             "dateString":"十二月",
             "list":[
                 {
-                    "proName":"花生",
-                    "img":"/static/u524.jpg",
-                    "pricre":"3",
+                    "proName":"花生","proId":"pro_0","proId":"pro_0",
+                    "img":"/static/peanut.png",
+                    "price":"3",
                     "stock":"6"
                 },
                 {
-                    "proName":"葵花",
+                    "proName":"葵花","proId":"pro_1",
                     "img":"/static/u527.png",
-                    "pricre":"3",
+                    "price":"3",
                     "stock":"6"
                 }
             ]

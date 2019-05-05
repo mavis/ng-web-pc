@@ -1,0 +1,17 @@
+{
+    "code":200,
+    "data":[
+        {
+            "img":"/static/sunflowerSeed.png",
+            "name":"山东"
+        },
+        {
+            "img":"/static/sunflowerSeed.png",
+            "name":"甘肃"
+        },
+        {
+            "img":"/static/sunflowerSeed.png",
+            "name":"河北"
+        }
+    ]
+}

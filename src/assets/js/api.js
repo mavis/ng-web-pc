@@ -7,7 +7,9 @@ const api = {
     'getTopBanners':'/index/getTopBanners',
     'getNotice':'/index/getNotice',
     'getTradeDynamics':'/index/getTradeDynamics',
-    'getBookingMonthList':'/index/getBookingMonthList'
+    'getBookingMonthList':'/index/getBookingMonthList',
+    "getMapData1":'/index/getMapData1',
+    "getMapData2":'/index/getMapData2'
 }
 
 for (let [key, value] of Object.entries(api)) {

@@ -9,7 +9,8 @@ const homepage={
     topBanners:[],
     notice:[],
     tradeDynamics:[],
-    bookingMonthList:[]
+    bookingMonthList:[],
+    mapData:[]
   },
   mutations: {
     setTopBanners(state, payload){
@@ -23,7 +24,10 @@ const homepage={
     },
     setBookingMonthList(state, payload){
       state.bookingMonthList = payload.bookingMonthList
-    }  
+    }  ,
+    setMapData(state, payload){
+      state.mapData = payload.mapData
+    } 
   },
   actions: {
     getTopBanners({commit,state,dispatch}){
@@ -53,7 +57,20 @@ const homepage={
             bookingMonthList: res.data.data
           })
       })
-    },      
+    },    
+    getMapData({commit,state,dispatch},proId){
+      let url = api.getMapData1;
+      if(proId == 'pro_0'){
+        url = api.getMapData2;
+      }else{
+        url = api.getMapData1;
+      }
+      return axios.get(url).then(res => {
+          commit('setMapData', {
+            mapData: res.data.data
+          })
+      })
+    },  
   }
 }
 export default homepage;

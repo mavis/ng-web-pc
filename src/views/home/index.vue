@@ -61,9 +61,9 @@
                 <div class="content-moudle-title">
                   预售专区
                 </div>
-                <slider :list="bookingMonthList"></slider>                
+                <slider :list="bookingMonthList" @pro-area="getProArea"></slider>                
                 <div class="echarts">
-                  <div :style="{height:'600px',width:'100%'}" ref="myEchart"></div>
+                  <china-map :area-data="mapData"></china-map>
                 </div>
             </div>
             <div class="content-moudle">
@@ -80,32 +80,17 @@ import { mapState, mapActions,mapMutations } from 'vuex';
 import Layout from '../../components/layout/layout'
 import categoryModule from '../../components/category/category'
 import slider from '../../components/slider/slider'
-import '../../../node_modules/echarts/map/js/china.js' // 引入中国地图数据
-
+import ChinaMap from '../../components/chinaMap/map'
 
 export default {  
   components: {
-    Layout,categoryModule,slider
+    Layout,categoryModule,slider,ChinaMap
   },
   data(){
       return{
          autoplay:true,
          dots:false,
-         areaData:[
-                {name: '河北', value: 18},
-                ],
-         geoCoordMap:{
-                    '海门':[121.15,31.89],
-                    '鄂尔多斯':[109.781327,39.608266],
-                    '招远':[120.38,37.35],
-                    '舟山':[122.207216,29.985295],
-                    '齐齐哈尔':[123.97,47.33],
-                    '盐城':[120.13,33.38],
-                    '赤峰':[118.87,42.28],
-                    '青岛':[120.33,36.07],
-                    '乳山':[121.52,36.89],
-                    '河北':[114.48,38.04]
-                },
+         chinaMap:'',
           dynamicsColumns:[
             {
               dataIndex: 'producingArea',
@@ -138,94 +123,25 @@ export default {
   },  
   computed: {
     ...mapState('homepage',[
-       'topBanners','notice','tradeDynamics','bookingMonthList'
+       'topBanners','notice','tradeDynamics','bookingMonthList','mapData'
     ]),
   },  
   methods:{
     ...mapActions('homepage',[
-      'getTopBanners','getNotices','getTradeDynamics','getBookingMonthList'
+      'getTopBanners','getNotices','getTradeDynamics','getBookingMonthList','getMapData'
     ]),
-    chinaConfigure() {
-      var _me = this;
-      var convertData = function (data) {
-          var res = [];
-          for (var i = 0; i < data.length; i++) {
-              var geoCoord = _me.geoCoordMap[data[i].name];
-              if (geoCoord) {
-                  res.push({
-                      name: data[i].name,
-                      value: geoCoord.concat(data[i].value)
-                  });
-              }
-          }
-          return res;
-      };           
-      let myChart = this.$echarts.init(this.$refs.myEchart); //这里是为了获得容器所在位置    
-      window.onresize = myChart.resize;
-      myChart.setOption({ // 进行相关配置
-        backgroundColor: "#fff",
-        tooltip: {
-          show:false
-        }, // 鼠标移到图里面的浮动提示框
-        dataRange: {
-          show: false,
-          min: 0,
-          max: 1000,
-          text: ['High', 'Low'],
-          realtime: true,
-          calculable: true,
-          color: ['orangered', 'yellow', 'lightskyblue']
-        },
-        geo: { // 这个是重点配置区
-          map: 'china', // 表示中国地图
-          roam: false,
-          label: {
-            normal: {
-              show: false, // 是否显示对应地名
-              textStyle: {
-                color: 'rgba(0,0,0,0.4)'
-              }
-            },
-            emphasis: {
-              show:false
-            }
-          },
-          itemStyle: {
-            normal: {
-              borderColor: '#fff',
-              areaColor:'#4A82BA'
-            },
-            emphasis: {
-              areaColor: '#3AA0FF',
-              shadowOffsetX: 0,
-              shadowOffsetY: 0,
-              shadowBlur: 20,
-              borderWidth: 0,
-              shadowColor: 'rgba(0, 0, 0, 0.5)'
-            }
-          }
-        },
-        series: [
-          {
-            type: 'scatter',
-            coordinateSystem: 'geo', // 对应上方配置
-            data: convertData(_me.areaData),
-            symbol:"image://static/u832.png",
-            symbolSize:18
-          }
-        ]
-      })
+
+    getProArea:function(proId,date){
+      this.getMapData(proId,date);
     }
   },
   created(){
     this.getTopBanners();
     this.getTradeDynamics();
     this.getBookingMonthList();
+    this.getProArea();
   },
-  mounted() {
-        this.chinaConfigure();
 
-  },
 }
 </script>
 <style lang="less">
