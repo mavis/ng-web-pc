@@ -1,40 +1,25 @@
 
-// import {api} from '../assets/js/api'
-// import axios from 'axios'
+import {api} from '../../assets/js/api'
+import axios from 'axios'
 const REQ_SUCCESS = 200
 
 const categroy={
   namespaced:true,
   state: {
-    categoryL1:[],
-    categoryL2:[],
+    categoryList:[]
   },
   mutations: {
-    setCategoryL1(state, payload){
-      state.categoryL1 = payload.categoryL1
+    setCategory(state, payload){
+      state.categoryList = payload.categoryList
     } 
   },
   actions: {
-    getCategoryL1({commit,state,dispatch}){
-       let list = [
-         {
-           id:'c-0-001',
-           lv:0,
-           childrenList:[
-             {
-               id:'c-1-001',
-              name:'粮油',
-              lv:1,
-              childrenList:[
-                {
-                  id:'c-2-001',
-                  name:'大米'
-                }
-              ]
-             }
-           ]
-         }
-       ]
+    getCategory({commit,state,dispatch}){
+      return axios.get(api.getCategory).then(res => {
+        commit('setCategory', {
+          categoryList: res.data.data
+        })
+      })
     } 
   }
 }

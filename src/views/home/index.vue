@@ -4,8 +4,7 @@
         <div slot="content"  class="main-content clearfix">
             <div class="content-1">
               <div class="content-1-l fl">
-              <!-- <category-module></category-module> -->
-              llllll
+                <category-module></category-module>
               </div>
               <div class="content-1-m fl">
                   <a-carousel effect="fade" :dots='dots' :autoplay="autoplay" arrows>
@@ -125,10 +124,16 @@ export default {
     ...mapState('homepage',[
        'topBanners','notice','tradeDynamics','bookingMonthList','mapData'
     ]),
+    ...mapState('categroy',[
+       'category'
+    ]),
   },  
   methods:{
     ...mapActions('homepage',[
       'getTopBanners','getNotices','getTradeDynamics','getBookingMonthList','getMapData'
+    ]),
+    ...mapActions('categroy',[
+      'getCategory'
     ]),
 
     getProArea:function(proId,date){
@@ -140,6 +145,7 @@ export default {
     this.getTradeDynamics();
     this.getBookingMonthList();
     this.getProArea();
+    this.getCategory();
   },
 
 }

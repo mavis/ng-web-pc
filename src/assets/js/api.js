@@ -9,7 +9,8 @@ const api = {
     'getTradeDynamics':'/index/getTradeDynamics',
     'getBookingMonthList':'/index/getBookingMonthList',
     "getMapData1":'/index/getMapData1',
-    "getMapData2":'/index/getMapData2'
+    "getMapData2":'/index/getMapData2',
+    "getCategory":'/index/getCategory'
 }
 
 for (let [key, value] of Object.entries(api)) {

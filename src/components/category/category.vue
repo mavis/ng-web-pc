@@ -1,6 +1,15 @@
 <template>
   <div>
-
+    <ul>
+      <li v-for="lv1Item in category" :key="lv1Item.id">
+        <a>
+          <span>{{lv1Item.name}}</span>
+          <span v-for="lv2Item in lv1Item.children" :key="lv2Item.id">
+            {{lv2Item.name}}
+          </span>
+        </a>
+      </li>
+    </ul>
   </div> 
 </template>
 <script>
@@ -10,13 +19,20 @@ export default {
       return{
          
       }
-  },   
+  },  
+  computed: {
+    ...mapState('categroy',[
+       'category'
+    ]),
+  },  
   methods:{
-
+    ...mapActions('categroy',[
+      'getCategory'
+    ]),
   },
-    created(){
-
-    },
+  created(){
+    // this.getCategory();
+  },
 
 }
 </script>
