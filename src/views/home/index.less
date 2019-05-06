@@ -87,13 +87,33 @@
     .content-moudle{
         margin:20px 0;
         background-color: #fff;
-        padding:20px;
+        padding-top:20px;
+        &.content-moudle-border{
+            border:3px solid @col-border-base;
+        }
         .content-moudle-title{
             margin-bottom:20px;
+            margin-left:20px;
             padding-left:15px;
             font-size: 23px;
             color:@col-main;
             border-left:6px solid  @col-main
+        }
+        .echarts-map{
+            width:850px;
+            float: left;
+        }
+        .echarts-line{
+            width:330px;
+            float: right;
+            >div{
+                height:240px;
+                border:3px solid @col-border-base;
+                border-right:none;
+                &:last-child{
+                    border-bottom:none;
+                }
+            }
         }
     }
 }

@@ -10,7 +10,9 @@ const api = {
     'getBookingMonthList':'/index/getBookingMonthList',
     "getMapData1":'/index/getMapData1',
     "getMapData2":'/index/getMapData2',
-    "getCategory":'/index/getCategory'
+    "getPriceData":'/index/getPriceData',
+    "getStockData":'/index/getStockData',
+    "getTradeData":'/index/getTradeData'
 }
 
 for (let [key, value] of Object.entries(api)) {

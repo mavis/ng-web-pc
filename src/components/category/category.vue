@@ -16,8 +16,8 @@
       <ul>
         <li v-for="item in lv2List"  :key="item.id">
           <span class="lv2Item">{{item.name}}</span>
-          <div class="lv3Item-list">
-            <span class="lv3Item" v-for="lv3Item in item.children" :key="lv3Item.id">
+          <div class="lv3Item-list" v-if="item.children.length>0">
+            <span class="lv3Item"  v-for="lv3Item in item.children" :key="lv3Item.id">
               {{lv3Item.name}}
             </span>
           </div>

@@ -10,7 +10,10 @@ const homepage={
     notice:[],
     tradeDynamics:[],
     bookingMonthList:[],
-    mapData:[]
+    mapData:[],
+    priceData:{},
+    stockData:{},
+    tradeData:{}
   },
   mutations: {
     setTopBanners(state, payload){
@@ -27,7 +30,16 @@ const homepage={
     }  ,
     setMapData(state, payload){
       state.mapData = payload.mapData
-    } 
+    },
+    setPriceData(state, payload){
+      state.priceData = payload.priceData
+    } ,
+    setStockData(state, payload){
+      state.stockData = payload.stockData
+    } ,
+    setTradeData(state, payload){
+      state.tradeData = payload.tradeData
+    }  
   },
   actions: {
     getTopBanners({commit,state,dispatch}){
@@ -70,7 +82,28 @@ const homepage={
             mapData: res.data.data
           })
       })
-    },  
+    }, 
+    getPriceData({commit,state,dispatch},proId){
+      return axios.get(api.getPriceData).then(res => {
+          commit('setPriceData', {
+            priceData: res.data.data
+          })
+      })
+    }, 
+    getStockData({commit,state,dispatch},proId){
+      return axios.get(api.getStockData).then(res => {
+          commit('setStockData', {
+            stockData: res.data.data
+          })
+      })
+    },
+    getTradeData({commit,state,dispatch},proId){
+      return axios.get(api.getTradeData).then(res => {
+          commit('setTradeData', {
+            tradeData: res.data.data
+          })
+      })
+    },     
   }
 }
 export default homepage;

@@ -56,14 +56,26 @@
                 </div>
               </div>
             </div>
-            <div class="content-moudle">
+            <div class="content-moudle clearfix content-moudle-border" >
                 <div class="content-moudle-title">
                   预售专区
                 </div>
-                <slider :list="bookingMonthList" @pro-area="getProArea"></slider>                
-                <div class="echarts">
+                <slider :list="bookingMonthList" @pro-area="getProArea" style="padding-bottom:20px"></slider>                
+                <div class="echarts-map">
                   <china-map :area-data="mapData"></china-map>
                 </div>
+                <div class="echarts-line">
+                  <div class="echarts-price-line">
+                    <price-line :line-data="priceData"></price-line>
+                  </div>
+                  <!-- <div class="echarts-stock-bar">
+                    <stock-bar :bar-data="stockData"></stock-bar>
+                  </div>
+                  <div class="echarts-trade-line">
+                    <trade-line :line-data="tradeData"></trade-line>
+                  </div> -->
+                </div>
+
             </div>
             <div class="content-moudle">
               <div class="content-moudle-title" style="color:#6699FF;border-color:#6699FF">
@@ -80,10 +92,12 @@ import Layout from '../../components/layout/layout'
 import categoryModule from '../../components/category/category'
 import slider from '../../components/slider/slider'
 import ChinaMap from '../../components/chinaMap/map'
-
+import PriceLine from '../../components/charts/priceLine'
+import StockBar from '../../components/charts/stockBar'
+import TradeLine from '../../components/charts/tradeLine'
 export default {  
   components: {
-    Layout,categoryModule,slider,ChinaMap
+    Layout,categoryModule,slider,ChinaMap,PriceLine,StockBar,TradeLine
   },
   data(){
       return{
@@ -122,12 +136,12 @@ export default {
   },  
   computed: {
     ...mapState('homepage',[
-       'topBanners','notice','tradeDynamics','bookingMonthList','mapData'
+       'topBanners','notice','tradeDynamics','bookingMonthList','mapData','priceData','stockData','tradeData'
     ])
   },  
   methods:{
     ...mapActions('homepage',[
-      'getTopBanners','getNotices','getTradeDynamics','getBookingMonthList','getMapData'
+      'getTopBanners','getNotices','getTradeDynamics','getBookingMonthList','getMapData','getPriceData','getStockData','getradeData'
     ]),
 
     getProArea:function(proId,date){
@@ -139,6 +153,7 @@ export default {
     this.getTradeDynamics();
     this.getBookingMonthList();
     this.getProArea();
+    this.getPriceData();
   },
 
 }
