@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div :style="{height:'600px',width:'100%'}" ref="myEchart"></div>
+    <div :style="{height:'700px',width:'100%'}" ref="myEchart"></div>
   </div> 
 </template>
 <script>

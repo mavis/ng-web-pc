@@ -116,7 +116,7 @@
             that.chart.setOption(option);
             that.chart.setOption({
                     yAxis:[{
-                        name:'元/吨',
+                        name:'(元/吨)',
                         type:"value"
                     }]
                 });

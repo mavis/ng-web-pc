@@ -13,7 +13,9 @@ const homepage={
     mapData:[],
     priceData:{},
     stockData:{},
-    tradeData:{}
+    tradeData:{},
+    platIndexData:{},
+    hotProList:[]
   },
   mutations: {
     setTopBanners(state, payload){
@@ -39,7 +41,13 @@ const homepage={
     } ,
     setTradeData(state, payload){
       state.tradeData = payload.tradeData
-    }  
+    } ,
+    setPlatIndexData(state, payload){
+      state.platIndexData = payload.platIndexData
+    } ,
+    setHotProList(state, payload){
+      state.hotProList = payload.hotProList
+    } ,
   },
   actions: {
     getTopBanners({commit,state,dispatch}){
@@ -103,7 +111,21 @@ const homepage={
             tradeData: res.data.data
           })
       })
-    },     
+    },
+    getPlatIndexData({commit,state,dispatch},proId){
+      return axios.get(api.getPlatIndexData).then(res => {
+          commit('setPlatIndexData', {
+            platIndexData: res.data.data
+          })
+      })
+    }, 
+    getHotProList({commit,state,dispatch},proId){
+      return axios.get(api.getHotProList).then(res => {
+          commit('setHotProList', {
+            hotProList: res.data.data
+          })
+      })
+    },       
   }
 }
 export default homepage;

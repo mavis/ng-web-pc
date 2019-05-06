@@ -39,7 +39,7 @@
                   <a-button class="btn-register">免费注册</a-button>
                 </div>
                 <div class="tabbox">
-                    <a-tabs defaultActiveKey="1">
+                    <a-tabs defaultActiveKey="2">
                       <a-tab-pane tab="消息通知" key="1">
                         <div class="tab-pane">
                             1111
@@ -68,12 +68,12 @@
                   <div class="echarts-price-line">
                     <price-line :line-data="priceData"></price-line>
                   </div>
-                  <!-- <div class="echarts-stock-bar">
-                    <stock-bar :bar-data="stockData"></stock-bar>
+                  <div class="echarts-stock-bar">
+                    <stock-bar :chart-data="stockData"></stock-bar>
                   </div>
                   <div class="echarts-trade-line">
                     <trade-line :line-data="tradeData"></trade-line>
-                  </div> -->
+                  </div> 
                 </div>
 
             </div>
@@ -81,7 +81,37 @@
               <div class="content-moudle-title" style="color:#6699FF;border-color:#6699FF">
                   平台指数
               </div>
+              <div class="platIndex-table">
+                <a-table :columns="platIndexColumns" :dataSource="platIndexData" :pagination="platIndexTablePage">
+                           
+                </a-table>
+              </div>
             </div>
+            <div class="content-moudle">
+              <div class="content-moudle-title" style="color:#FF511A;border-color:#FF511A">
+                  热销产品
+                  <div class="more">
+                    <router-link tag="a" :to="{path:'/productList'}">查看全部<a-icon type="right" /></router-link>
+                  </div>
+              </div>
+              <div class="hot-pro-list">
+                <a-card v-for="item in hotProList" :key="item.id" class="card"
+                  hoverable
+                  style="flex:1"
+                >
+                  <img
+                    alt="example"
+                    :src="item.img"
+                    slot="cover"
+                  />
+                  <div class="name">{{item.name}}</div>
+                  <a-card-meta>
+                    <template slot="description">{{item.desc}}</template>
+                  </a-card-meta>
+                  <div>{{item.minPrice}}-{{item.maxPrice}}</div>
+                </a-card>
+              </div>
+            </div>            
         </div>
       </layout>
   </div> 
@@ -131,17 +161,63 @@ export default {
               dataIndex: 'closingTime'
             }
           ] ,
-          dynamicsTablePage:false     
+          platIndexColumns:[
+            {
+              dataIndex: 'producingArea',
+              key: 'producingArea',
+              title:"产地"
+            }, 
+            {
+              title: '品种',
+              dataIndex: 'productVariety',
+              key: 'productVariety',
+            },
+            {
+              title: '商品名称',
+              dataIndex: 'productName',
+              key: 'productName',
+            },
+            {
+              title: '种植面积',
+              dataIndex: 'growingAreas',
+              key: 'growingAreas',
+            },
+            {
+              title: '预估产量',
+              dataIndex: 'predictYield',
+              key: 'predictYield',
+            },
+            {
+              title: '实际产量',
+              dataIndex: 'yield',
+              key: 'yield',
+            },
+            {
+              title: '剩余库存量',
+              dataIndex: 'storage',
+              key: 'storage',
+            }, 
+            {
+              title: '最新成交价',
+              key: 'latestTransactionPrice',
+              dataIndex: 'latestTransactionPrice'
+            }
+          ] ,
+          dynamicsTablePage:false,
+          platIndexTablePage:false     
       }
   },  
   computed: {
     ...mapState('homepage',[
-       'topBanners','notice','tradeDynamics','bookingMonthList','mapData','priceData','stockData','tradeData'
+       'topBanners','notice','tradeDynamics','bookingMonthList','mapData',
+       'priceData','stockData','tradeData','platIndexData','hotProList'
     ])
   },  
   methods:{
     ...mapActions('homepage',[
-      'getTopBanners','getNotices','getTradeDynamics','getBookingMonthList','getMapData','getPriceData','getStockData','getradeData'
+      'getTopBanners','getNotices','getTradeDynamics','getBookingMonthList',
+      'getMapData','getPriceData','getStockData','getTradeData','getPlatIndexData',
+      'getHotProList'
     ]),
 
     getProArea:function(proId,date){
@@ -154,6 +230,10 @@ export default {
     this.getBookingMonthList();
     this.getProArea();
     this.getPriceData();
+    this.getTradeData();
+    this.getStockData();
+    this.getPlatIndexData();
+    this.getHotProList();
   },
 
 }

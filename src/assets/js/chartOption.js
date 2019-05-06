@@ -241,10 +241,10 @@ export default {
         data: []
       },
       grid: {
-        top: '20px',
+        top: '30px',
         left: '10px',
         right: '10px',
-        bottom: '10px',
+        bottom: '30px',
         containLabel: true
       },
       toolbox: {
@@ -269,7 +269,7 @@ export default {
          fontSize:10,
          fontFamily:'DIN',
           textStyle: {
-            color: '#a7a7a7'
+            color: '#333'
           },
           margin: 12,
           interval: 0
@@ -290,11 +290,11 @@ export default {
           show: false
         },
         axisLabel: {
-         color:'#a7a7a7',
+         color:'#333',
          fontSize:10,
          fontFamily:'DIN',
          textStyle: {
-           color: '#a7a7a7'
+           color: '#333'
          }
        }
       },

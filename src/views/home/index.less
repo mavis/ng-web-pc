@@ -97,7 +97,12 @@
             padding-left:15px;
             font-size: 23px;
             color:@col-main;
-            border-left:6px solid  @col-main
+            border-left:6px solid  @col-main;
+            .more{
+                font-size:13px;
+                float: right;
+                padding-right:20px;
+            }
         }
         .echarts-map{
             width:850px;
@@ -115,5 +120,44 @@
                 }
             }
         }
+        .platIndex-table{
+            table{
+                th{
+                    font-weight:bold;
+                    background-color: @col-main;
+                    font-size: 16px;
+                    color:#fff;
+                    text-align: center;
+                }
+                td{
+                    text-align: center;
+                }
+            }
+        }
+        .hot-pro-list{
+            display: flex;
+            padding:0 20px;
+            .card{
+                margin-right:15px;
+            }
+        }
+    }
+}
+.hot-pro-list .ant-card-body{
+    padding:10px 15px;
+    text-align: center;
+    .name{
+        width: 60px;
+        padding:3px 0;
+        color:#fff;
+        font-size:14px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: @col-orange;
+        border-radius:15px;
+        margin-bottom:10px;
+    }
+    .ant-card-meta-description{
+        font-size:12px;
     }
 }
