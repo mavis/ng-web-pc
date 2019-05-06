@@ -1,7 +1,4 @@
-/**
- * api接口，切换HOST即可切换本地模拟api或线上api
- */
-// const HOST = '/rest';
+
 const HOST = '';
 const api = {
     'getTopBanners':'/index/getTopBanners',
@@ -15,7 +12,8 @@ const api = {
     "getStockData":'/index/getStockData',
     "getTradeData":'/index/getTradeData',
     'getPlatIndexData':'/index/getPlatIndexData',
-    'getHotProList':'/index/getHotProList'
+    'getHotProList':'/index/getHotProList',
+    'getPlatNotices':'/index/getPlatNotices'
 }
 
 for (let [key, value] of Object.entries(api)) {

@@ -87,9 +87,10 @@
     .content-moudle{
         margin:20px 0;
         background-color: #fff;
-        padding-top:20px;
+        padding:20px 0;
         &.content-moudle-border{
             border:3px solid @col-border-base;
+            padding-bottom: 0;
         }
         .content-moudle-title{
             margin-bottom:20px;
@@ -139,7 +140,23 @@
             padding:0 20px;
             .card{
                 margin-right:15px;
+                &:last-child{
+                    margin-right:0;
+                }
             }
+        }
+        .platNotice-list{
+            padding:0 20px;
+            >div{
+                margin-right:15px;
+                &:last-child{
+                    margin-right:0;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+            
         }
     }
 }

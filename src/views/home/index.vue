@@ -42,7 +42,7 @@
                     <a-tabs defaultActiveKey="2">
                       <a-tab-pane tab="消息通知" key="1">
                         <div class="tab-pane">
-                            1111
+                            暂无数据
                         </div>
                       </a-tab-pane>
                       <a-tab-pane tab="成交动态" key="2" forceRender>
@@ -112,7 +112,20 @@
                   <div class="onsaleNum"><span>挂单量：</span><span>{{item.onsaleNum}}</span>吨</div>
                 </a-card>
               </div>
-            </div>            
+            </div> 
+            <div class="content-moudle" >
+              <div class="content-moudle-title" style="color:#4964BE;border-color:#4964BE">
+                  平台公告
+                  <div class="more">
+                    <router-link tag="a" :to="{path:'/productList'}">更多品牌<a-icon type="right" /></router-link>
+                  </div>
+              </div>
+              <div class="flex  platNotice-list">
+                <div class="flex-item" v-for="item in  platNotices" :key="item.id">
+                  <img :src="item.img">
+                </div>
+              </div>
+            </div>           
         </div>
       </layout>
   </div> 
@@ -211,14 +224,14 @@ export default {
   computed: {
     ...mapState('homepage',[
        'topBanners','notice','tradeDynamics','bookingMonthList','mapData',
-       'priceData','stockData','tradeData','platIndexData','hotProList'
+       'priceData','stockData','tradeData','platIndexData','hotProList','platNotices'
     ])
   },  
   methods:{
     ...mapActions('homepage',[
       'getTopBanners','getNotices','getTradeDynamics','getBookingMonthList',
       'getMapData','getPriceData','getStockData','getTradeData','getPlatIndexData',
-      'getHotProList'
+      'getHotProList','getPlatNotices'
     ]),
 
     getProArea:function(proId,date){
@@ -235,6 +248,7 @@ export default {
     this.getStockData();
     this.getPlatIndexData();
     this.getHotProList();
+    this.getPlatNotices();
   },
 
 }

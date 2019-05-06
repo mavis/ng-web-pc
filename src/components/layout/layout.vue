@@ -65,8 +65,51 @@
             </div>
             <slot name='content'> </slot>
         </a-layout-content>
-        <a-layout-footer>
-            <slot name='footer' class="footer-content">333 </slot>
+        <a-layout-footer class="footer">
+            <div class="footer-content">
+                <div class="footer-moudle">
+                    <div class="moudle-title">
+                        新手帮助
+                    </div>
+                    <div  class="moudle-item clearfix">
+                        <div class="fl">
+                            <a-icon type="file-text" />
+                            <div>用户手册</div>
+                        </div>
+                        <div class="fr">
+                            <a-icon type="question-circle" />
+                            <div>常见问题</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-moudle">
+                    <div class="moudle-title">
+                        平台规则
+                    </div>
+                    <div  class="moudle-item clearfix">
+                        <div class="fl">
+                            <a-icon type="cluster" />
+                            <div>挂单流程</div>
+                        </div>
+                        <div class="fr">
+                            <a-icon type="form" />
+                            <div>交易商协议</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-moudle " style='vertical-align:top'>
+                    <div class="moudle-title">
+                        服务热线
+                    </div>
+                    <div  class="">
+                        <div style="font-size:18px;font-weight:bolder;padding:10px 0;">0432-62883333</div>
+                        <div>周一至周日 8:30-17:00</div>
+                    </div>
+                </div>
+                <div class="footer-moudle"  style='vertical-align:top'>
+                    <img src="/static/u10.png">
+                </div>
+            </div>
         </a-layout-footer>
     </a-layout>
   </div> 

@@ -1,0 +1,21 @@
+{
+    "code":200,
+    "data":[
+        {
+            "id":"001",
+            "img":"/static/u267.png"
+        },
+        {
+            "id":"002",
+            "img":"/static/u268.png"
+        },
+        {
+            "id":"003",
+            "img":"/static/u267.png"
+        },
+        {
+            "id":"004",
+            "img":"/static/u268.png"
+        }
+    ]
+}
