@@ -108,7 +108,8 @@
                   <a-card-meta>
                     <template slot="description">{{item.desc}}</template>
                   </a-card-meta>
-                  <div>{{item.minPrice}}-{{item.maxPrice}}</div>
+                  <div class="price"><span>{{item.minPrice}}-{{item.maxPrice}}</span>元/吨</div>
+                  <div class="onsaleNum"><span>挂单量：</span><span>{{item.onsaleNum}}</span>吨</div>
                 </a-card>
               </div>
             </div>            
