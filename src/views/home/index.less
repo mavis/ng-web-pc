@@ -4,7 +4,7 @@
     margin: 0 auto;
     min-height: 800px;
     .content-1{
-        height: 430px;
+        height: 410px;
         width: 100%;
         background-color: #fff;
         .content-1-l{
@@ -45,6 +45,7 @@
             width: @w-right;
             padding:35px 0;
             .dynamicsTable{
+                margin-top: -10px;
                 table{
                     font-size: 12px;
                     th{
@@ -142,6 +143,16 @@
                 margin-right:15px;
                 &:last-child{
                     margin-right:0;
+                }
+                .price{
+                    >span{                        
+                        color:@col-orange;
+                        font-size:15px;
+                    }
+                    padding:5px 0
+                }
+                .onsaleNum{
+                    color:@col-orange;
                 }
             }
         }

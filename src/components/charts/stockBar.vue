@@ -23,7 +23,6 @@
             ],	
             watch: {
                 chartData(){
-                    // this.maxNum = this.chartData.all;
                     this.initBarChart();	
                 }
             },			         
@@ -68,7 +67,6 @@
               this.barChart.setOption(option);
               let toolTipLbl = this.tooltipLbl;
               let color = '#3AA1FF';
-            //   let max = this.maxNum;
               this.barChart.setOption({
                     axisPointer: { 
                         lineStyle: {
@@ -82,9 +80,12 @@
                     }]
                 });
             }      	     		
-            }		    
-        }  	        
-    </script>
+            },
+        mounted() {
+            this.initBarChart();
+        },            		    
+    }  	        
+</script>
  <style lang="less" scoped>
     @import "./charts.less";
 </style>

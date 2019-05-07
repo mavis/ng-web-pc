@@ -4,7 +4,7 @@
         <a-layout-header>
             <slot name='header'>
                 <div class="header-content">
-                    <div class="fl">********平台</div>
+                    <div class="fl"></div>
                     <div class="fr">
                         <span>登录</span>
                         <span></span>
@@ -65,51 +65,54 @@
             </div>
             <slot name='content'> </slot>
         </a-layout-content>
-        <a-layout-footer class="footer">
-            <div class="footer-content">
-                <div class="footer-moudle">
-                    <div class="moudle-title">
-                        新手帮助
-                    </div>
-                    <div  class="moudle-item clearfix">
-                        <div class="fl">
-                            <a-icon type="file-text" />
-                            <div>用户手册</div>
+        <a-layout-footer>
+            <div  class="footer">
+                <div class="footer-content">
+                    <div class="footer-moudle">
+                        <div class="moudle-title">
+                            新手帮助
                         </div>
-                        <div class="fr">
-                            <a-icon type="question-circle" />
-                            <div>常见问题</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-moudle">
-                    <div class="moudle-title">
-                        平台规则
-                    </div>
-                    <div  class="moudle-item clearfix">
-                        <div class="fl">
-                            <a-icon type="cluster" />
-                            <div>挂单流程</div>
-                        </div>
-                        <div class="fr">
-                            <a-icon type="form" />
-                            <div>交易商协议</div>
+                        <div  class="moudle-item clearfix">
+                            <div class="fl">
+                                <a-icon type="file-text" />
+                                <div>用户手册</div>
+                            </div>
+                            <div class="fr">
+                                <a-icon type="question-circle" />
+                                <div>常见问题</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="footer-moudle " style='vertical-align:top'>
-                    <div class="moudle-title">
-                        服务热线
+                    <div class="footer-moudle">
+                        <div class="moudle-title">
+                            平台规则
+                        </div>
+                        <div  class="moudle-item clearfix">
+                            <div class="fl">
+                                <a-icon type="cluster" />
+                                <div>挂单流程</div>
+                            </div>
+                            <div class="fr">
+                                <a-icon type="form" />
+                                <div>交易商协议</div>
+                            </div>
+                        </div>
                     </div>
-                    <div  class="">
-                        <div style="font-size:18px;font-weight:bolder;padding:10px 0;">0432-62883333</div>
-                        <div>周一至周日 8:30-17:00</div>
+                    <div class="footer-moudle " style='vertical-align:top'>
+                        <div class="moudle-title">
+                            服务热线
+                        </div>
+                        <div  class="">
+                            <div style="font-size:18px;font-weight:bolder;padding:10px 0;">0432-62883333</div>
+                            <div>周一至周日 8:30-17:00</div>
+                        </div>
                     </div>
-                </div>
-                <div class="footer-moudle"  style='vertical-align:top'>
-                    <img src="/static/u10.png">
+                    <div class="footer-moudle"  style='vertical-align:top'>
+                        <img src="/static/u10.png">
+                    </div>
                 </div>
             </div>
+
         </a-layout-footer>
     </a-layout>
   </div> 

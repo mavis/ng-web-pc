@@ -122,7 +122,9 @@
                 });
             }
         },
-
+        mounted() {
+            this.initLine();
+        },
     }
 </script>
       

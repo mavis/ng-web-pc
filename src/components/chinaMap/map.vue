@@ -146,11 +146,11 @@ export default {
     },
     watch:{
         areaData(){
-            this.chinaConfigure();
+            this.chinaConfigure();            
         }
     },
     mounted() {
-        // this.chinaConfigure();
+        this.chinaConfigure();
     },
 }
 </script>

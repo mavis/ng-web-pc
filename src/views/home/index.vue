@@ -1,5 +1,5 @@
 <template>
-  <div v-title="''">
+  <div v-title="'云耕供销网'">
       <layout>
         <div slot="content"  class="main-content clearfix">
             <div class="content-1">
@@ -60,8 +60,8 @@
                 <div class="content-moudle-title">
                   预售专区
                 </div>
-                <slider :list="bookingMonthList" @pro-area="getProArea" style="padding-bottom:20px"></slider>                
-                <div class="echarts-map">
+                <slider :list="bookingMonthList"  @pro-area="getProArea" style="padding-bottom:20px"></slider>                
+                <div class="echarts-map" >
                   <china-map :area-data="mapData"></china-map>
                 </div>
                 <div class="echarts-line">
@@ -108,8 +108,8 @@
                   <a-card-meta>
                     <template slot="description">{{item.desc}}</template>
                   </a-card-meta>
-                  <div class="price"><span>{{item.minPrice}}-{{item.maxPrice}}</span>元/吨</div>
-                  <div class="onsaleNum"><span>挂单量：</span><span>{{item.onsaleNum}}</span>吨</div>
+                  <div class="price"><span >{{item.minPrice}}-{{item.maxPrice}}</span>元/吨</div>
+                  <div><span>挂单量：</span><span  class="onsaleNum">{{item.onsaleNum}}</span>吨</div>
                 </a-card>
               </div>
             </div> 

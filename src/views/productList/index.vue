@@ -129,66 +129,6 @@ export default {
           currentLv1Cate:'',
           currentLv2Cate:'',
           currentLv3Cate:'',
-        //   {
-        //     "img":"/static/u832.png",
-        //     "id":"001",
-        //     "name":"大豆",
-        //     "grade":"二等品",
-        //     "status":"预售",
-        //     "salesCompany":"吉林*****公司",
-        //     "minPrice":"2000",
-        //     "maxPrice":"3000",
-        //     "priceType":"库存价",
-        //     "producingArea":"吉林省",
-        //     "stockProvince":"辽宁省",
-        //     "stockCity":"锦州市",
-        //     "transactionProvince":"辽宁省",
-        //     "transactionCity":"锦州市",
-        //     "onsaleNum":"500",
-        //     "pubTime":"2019-04-0910:15:57"
-        // },
-        //   productListColumns:[
-        //     {
-        //       dataIndex: 'producingArea',
-        //       key: 'producingArea',
-        //       title:"产地"
-        //     }, 
-        //     {
-        //       title: '品种',
-        //       dataIndex: 'productVariety',
-        //       key: 'productVariety',
-        //     },
-        //     {
-        //       title: '商品名称',
-        //       dataIndex: 'productName',
-        //       key: 'productName',
-        //     },
-        //     {
-        //       title: '种植面积',
-        //       dataIndex: 'growingAreas',
-        //       key: 'growingAreas',
-        //     },
-        //     {
-        //       title: '预估产量',
-        //       dataIndex: 'predictYield',
-        //       key: 'predictYield',
-        //     },
-        //     {
-        //       title: '实际产量',
-        //       dataIndex: 'yield',
-        //       key: 'yield',
-        //     },
-        //     {
-        //       title: '剩余库存量',
-        //       dataIndex: 'storage',
-        //       key: 'storage',
-        //     }, 
-        //     {
-        //       title: '最新成交价',
-        //       key: 'latestTransactionPrice',
-        //       dataIndex: 'latestTransactionPrice'
-        //     }
-        //   ] ,
       }
   },  
   methods:{
@@ -218,10 +158,8 @@ export default {
           this.search();
       }
   },
-  created(){
-      if(!this.categoryList || this.categoryList.length<1){
-        this.getCategory();
-      }
+  created(){     
+    this.getCategory();
   },
 
 }
