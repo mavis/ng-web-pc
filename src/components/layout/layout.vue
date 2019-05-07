@@ -27,7 +27,7 @@
                             <router-link  tag="a" :to="{path:'/index'}" >首页</router-link>
                         </span>
                         <span>
-                            <router-link  tag="a" :to="{path:'/index'}" >现货商城</router-link>
+                            <router-link  tag="a" :to="{path:'/productList'}" >现货商城</router-link>
                         </span>
                         <span>
                             <router-link  tag="a" :to="{path:'/index'}" >预售专区</router-link>
@@ -53,7 +53,7 @@
                         <router-link  tag="a" :to="{path:'/index'}" >首页</router-link>
                     </span>
                     <span>
-                        <router-link  tag="a" :to="{path:'/index'}" >现货商城</router-link>
+                        <router-link  tag="a" :to="{path:'/productList'}" >现货商城</router-link>
                     </span>
                     <span>
                         <router-link  tag="a" :to="{path:'/index'}" >预售专区</router-link>

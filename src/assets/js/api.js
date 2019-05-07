@@ -13,7 +13,8 @@ const api = {
     "getTradeData":'/index/getTradeData',
     'getPlatIndexData':'/index/getPlatIndexData',
     'getHotProList':'/index/getHotProList',
-    'getPlatNotices':'/index/getPlatNotices'
+    'getPlatNotices':'/index/getPlatNotices',
+    'getProductList':'/index/getProductList',
 }
 
 for (let [key, value] of Object.entries(api)) {

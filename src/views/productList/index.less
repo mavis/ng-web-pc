@@ -1,0 +1,70 @@
+@import "../../assets/css/variable.less";
+
+.main-content{
+    min-height: 800px;
+    background-color: #fff;
+    .main-content-inner{
+        width: @w-main;
+        margin: 0 auto;
+        .selector-title{
+            height:60px;
+            line-height: 60px;   
+        }
+        .selector{
+            padding:0 80px;
+            border:1px solid @col-border-base;
+            color: #4b4b4b;
+            .selector-line{
+                height:60px;
+                line-height: 60px;
+                .selector-line-name{
+                    color: @f-grey;
+                    letter-spacing: 10px;
+                }
+                .selector-line-item{
+                    display: inline-block;
+                    padding:0 20px;
+                    cursor: pointer;
+                    
+                    &:hover{
+                        color: @col-main;
+                    }
+                    &.current{
+                        color: @col-main;
+                    }
+                }
+                button{
+                    margin: 0 10px;
+                }
+                .more{
+                    cursor: pointer;
+                }
+            }
+    
+        }
+        .pro-list{
+            border:1px solid @col-border-base;
+            margin-top:30px;
+            .pro-status{
+                padding:2px 5px;
+                background-color: @col-orange;
+                color:#fff;
+                font-size:13px
+            }
+            .pro-name{
+                font-size: 18px;
+            }
+            .pro-onsaleNum,
+            .pro-price{
+                color:@col-orange;
+                font-size: 16px;
+            }
+            .pro-priceType{
+                color: @col-main;
+            }
+        }
+    }
+}
+.ant-table{
+    font-size:12px;
+}
